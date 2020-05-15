@@ -1,0 +1,48 @@
+.nav {
+    position: relative;
+    display: block;
+    min-width: 23.125%;
+    min-height: 100vh;
+    background-color: $secondary;
+    .navbar {
+        padding: 0;
+        
+        li {
+            padding: 0.25rem 2rem;
+            margin-bottom: 1.375rem;
+        }
+    }
+    .material-icons {
+        vertical-align: sub;
+        margin-right: 16px;
+        font-size: 20px;
+    }
+    .active {
+        position: relative;
+        &:before {
+            content: "";
+            width: 4px;
+            height: 32px;
+            background: $primary;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        a {
+            color: $primary;
+        }
+    }
+    .account {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+    }
+    .accountImg {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: url('../images/pic01.jpg') no-repeat;
+        background-size: 40px;
+        margin-right: 1rem;
+    }
+}

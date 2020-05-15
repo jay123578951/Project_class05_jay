@@ -1,0 +1,72 @@
+// device max-width
+.container-fluid {
+	padding: 0;
+	@include container;
+}
+main {
+  width: 100%;
+}
+
+// logo
+.logo {
+  padding: 32px;
+}
+
+// font
+.h2 {
+	font-size: 2rem;
+}
+.h3 {
+	font-size: 1.25rem;
+	line-height: $line-height-md;
+	margin-bottom: 1rem;
+}
+.h4 {
+	font-size: $font-size-base;
+	line-height: 1.1875rem;
+	font-weight: 700;
+	margin-bottom: .25rem;
+}
+.em {
+	display: block;
+	font-style: normal;
+	color: $light;
+	font-size: $font-size-md;
+	line-height: $line-height-base;
+}
+.keyword {
+	color: $primary;
+	background: $secondary;
+	padding: 0 .25rem;
+}
+
+
+// button
+.btn-primary {
+	color: fff;
+	background-color: $primary;
+	border: 1px solid $primary;
+	padding: .5rem 2rem;
+	&:hover {
+		background-color: $primary;
+		border: 1px solid $primary;        
+	}
+}
+.btn-secondary {
+	color: $primary;
+	background-color: #fff;
+	border: 1px solid $primary;
+	padding: .5rem 2rem;
+	margin-right: 1rem;
+	&:hover {
+		color: $primary;
+		background-color: #fff;
+		border: 1px solid $primary;
+	}    
+}
+
+// Icon
+.material-icons {
+	display: inline-block;
+	font-size: 1.5rem;
+}

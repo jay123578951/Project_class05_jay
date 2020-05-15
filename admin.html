@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首頁</title>
+  <!-- css link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <!-- js link -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="d-flex flex-nowrap">
+      <section class="nav">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo-ANSWER.svg" alt="">
+          </a>
+        </h1>
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="material-icons">insert_chart</span>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-icons">forum</span>
+                Question
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <span class="material-icons">assignment</span>
+                Assignment
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-icons">video_library</span>
+                Course
+              </a>
+            </li>
+            <li>
+              <a href="admin.html">
+                <span class="material-icons">supervisor_account</span>
+                Admin
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="material-icons">settings</span>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="account d-flex flex-nowrap align-items-center">
+          <div class="accountImg"></div>
+          <div class="accountInfo">
+            <h4 class="h4">Andy Chen</h4>
+            <em class="em">andy0401@mail.com</em>
+          </div>
+        </div>
+      </section>
+
+      
+<main>
+	<section class="topnav d-flex flex-nowrap justify-content-between align-items-center">
+		<div class="topnavCnt d-flex flex-nowrap justify-content-start align-items-center">
+			<h2 class="assignmentTitle">Admin</h2>
+			<!-- Add New Admin Button trigger modal -->
+			<button type="button" class="btn adminBtn" data-toggle="modal" data-target="#adminModalLong">
+				<span class="material-icons adminBtn-addIcon">add</span>
+				Add New Admin
+			</button>
+			<!-- Add New Admin Modal -->
+			<div class="modal fade" id="adminModalLong" tabindex="-1" role="dialog" aria-labelledby="adminModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content modal-content-long">
+					<div class="modal-header">
+						<h2 class="h2 modal-title" id="adminModalLongTitle">Edit Admin</h2>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span class="material-icons" aria-hidden="true">clear</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="">
+							<div class="form-group">
+								<h3 class="h3">Account</h3>
+								<label for="newAdmin-name">Name</label>
+								<input type="text" class="form-control admin-name-input" id="newAdmin-name">
+								<label for="newAdmin-email">Email</label>
+								<input type="email" class="form-control" id="newAdmin-email">
+							</div>
+							<div class="form-group">
+								<h3 class="h3">Verification</h3>
+								<div class="verification-status">
+									<div class="verification-status-wrap">
+										<span class="material-icons unverified-icon">warning</span>
+										<span class="verification-status-cnt">Unverified</span>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-secondary verificationBtn">Send Verification Mail</button>
+							</div>
+							<div class="form-group">
+								<h3 class="h3">Access Level</h3>
+								<div class="form-group-select">
+									<span class="material-icons">keyboard_arrow_down</span>
+									<select class="form-control" id="newAdmin-accessLevel">
+										<option>-Choose access level-</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-check d-flex align-items-center">
+									<input class="form-check-input" type="checkbox" value="" id="newAdmin-lecture">
+									<label class="form-check-label" for="newAdmin-lecture">
+										Lecture
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-center">
+									<input class="form-check-input" type="checkbox" value="" id="newAdmin-coupon">
+									<label class="form-check-label" for="newAdmin-coupon">
+										Coupon
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-center">
+									<input class="form-check-input" type="checkbox" value="" id="newAdmin-message">
+									<label class="form-check-label" for="newAdmin-message">
+										Message
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-center">
+									<input class="form-check-input" type="checkbox" value="" id="newAdmin-setting">
+									<label class="form-check-label" for="newAdmin-setting">
+										Setting
+									</label>
+								</div>
+								<div class="form-check d-flex align-items-center">
+									<input class="form-check-input" type="checkbox" value="" id="newAdmin-taskMenu">
+									<label class="form-check-label" for="newAdmin-taskMenu">
+										Task Menu
+									</label>
+								</div>									
+							</div>
+						</form>							
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary">Add</button>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="topnavFuntion">
+			<ul class="d-flex flex-nowrap justify-content-end align-items-center">
+				<li>
+					<a href="">
+						<span class="material-icons topnav-search">search</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="material-icons">notifications_active</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="content">
+		<table class="table">
+			<thead class="admin-thead">
+				<tr class="admin-thead-tr">
+					<th class="h4" scope="col">ID
+						<span class="material-icons">arrow_downward</span>
+					</th>
+					<th class="h4" scope="col">Name</th>
+					<th class="h4" scope="col">Email</th>
+					<th class="h4" scope="col">Verified</th>
+					<th class="h4" scope="col"></th>
+				</tr>
+			</thead>
+			<tbody class="admin-tbody">
+				<tr class="admin-tbody-tr">
+					<th scope="row">#1</th>
+					<td>Emir Wicks</td>
+					<td>emir.wicks@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header edit-modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-row flex-nowrap justify-content-between align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header modal-heade">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#2</th>
+					<td>Zaina Goldsmith</td>
+					<td>zaina.goldsmith@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion"> 
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#3</th>
+					<td>Mahima Lopez</td>
+					<td>mahima.Lopez@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#4</th>
+					<td>Pharrell Murray</td>
+					<td>pharrell.Murray@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#5</th>
+					<td>Annika Mcbride</td>
+					<td>annika.Mcbride@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#6</th>
+					<td>Fatimah Clark</td>
+					<td>fatimah.Clark@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#7</th>
+					<td>Klaudia Rhodes</td>
+					<td>klaudia.Rhodes@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#8</th>
+					<td>Tillie Lucero</td>
+					<td>tillie.Lucero@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#9</th>
+					<td>Sabrina Stephenson</td>
+					<td>sabrina.Stephenson@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+				<tr class="admin-tbody-tr">
+					<th scope="row">#10</th>
+					<td>Annie Smith</td>
+					<td>annie.Smith@mail.com</td>
+					<td>Yes </td>
+					<td class="admin-funtion">
+
+						<!-- Read Admin Button trigger modal -->
+						<button type="button" class="btn readBtn" data-toggle="modal" data-target="#readModalCenter">
+							<span class="material-icons">remove_red_eye</span>
+						</button>
+						<!-- Read Admin Modal -->
+						<div class="modal fade" id="readModalCenter" tabindex="-1" role="dialog" aria-labelledby="readModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body d-flex flex-nowrap align-items-start">
+										<div class="readCntImg"></div>
+										<div class="readCntInfo">
+											<p class="readCntInfo-num">#1</p>
+											<p class="readCntInfo-level">Admin</p>
+											<h2 class="h2 readCntInfo-name">Emir Wicks</h2>
+											<em class="em readCntInfo-mail">emir.wicks@mail.com</em>
+											<div class="readCntInfo-funtion d-flex flex-nowrap justify-content-between align-items-center">
+												<p class="readCntInfo-status">verified</p>
+												<p class="readCntInfo-collapse">
+													<a class="" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+														<span class="material-icons">keyboard_arrow_down</span>
+													</a>
+												</p>
+											</div>
+											<div class="collapse" id="collapseExample">
+												<div class="card card-body read-collapse-card d-flex flex-nowrap justify-content-end align-items-center">
+													<button type="button" class="btn btn-secondary read-deactivateBtn" data-dismiss="modal">Deactivate</button>
+													<button type="button" class="btn btn-primary read-editBtn">Edit</button>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Edit Admin Button trigger modal -->
+						<button type="button" class="btn editBtn" data-toggle="modal" data-target="#editModalLong">
+							<span class="material-icons">edit</span>
+						</button>
+						<!-- Edit Admin Modal -->
+						<div class="modal fade" id="editModalLong" tabindex="-1" role="dialog" aria-labelledby="editModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-content-long">
+									<div class="modal-header">
+										<h2 class="h2 modal-title" id="editModalLongTitle">Edit Admin</h2>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span class="material-icons" aria-hidden="true">clear</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form action="">
+											<div class="form-group">
+												<h3 class="h3">Account</h3>
+												<label for="editAdmin-name">Name</label>
+												<input type="text" class="form-control admin-name-input" id="editAdmin-name" placeholder="Emir Wicks" readonly>
+												<label for="editAdmin-email">Email</label>
+												<input type="email" class="form-control" id="editAdmin-email" placeholder="emir.wicks@mail.com" readonly>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Verification</h3>
+												<div class="verification-status d-flex justify-content-between align-items-center">
+													<div class="verification-status-wrap">
+														<span class="material-icons verified-icon">check_circle</span>
+														<span class="verification-status-cnt">Verified</span>
+													</div>
+													<div class="verification-status-date">
+														2020/4/12
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary verificationBtn verification-doneBtn" disabled>Send Verification Mail</button>
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Access Level</h3>
+												<div class="form-group-select">
+													<span class="material-icons">keyboard_arrow_down</span>
+													<select class="form-control" id="editAdmin-accessLevel">
+														<option>Admin</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-lecture">
+													<label class="form-check-label" for="editAdmin-lecture">
+														Lecture
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-coupon">
+													<label class="form-check-label" for="editAdmin-coupon">
+														Coupon
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-message">
+													<label class="form-check-label" for="editAdmin-message">
+														Message
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-setting">
+													<label class="form-check-label" for="editAdmin-setting">
+														Setting
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center">
+													<input class="form-check-input" type="checkbox" value="" id="editAdmin-taskMenu">
+													<label class="form-check-label" for="editAdmin-taskMenu">
+														Task Menu
+													</label>
+												</div>									
+											</div>
+											<div class="form-group">
+												<h3 class="h3">Deactivate Account</h3>
+												<div class="verification-status">
+													<div class="verification-status-wrap">
+														<span class="material-icons unverified-icon">warning</span>
+														<span class="verification-status-cnt deactivate-cnt">This cannot be undone!</span>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-secondary deactivateBtn">Send Verification Mail</button>
+											</div>
+										</form>							
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+										<button type="button" class="btn btn-primary">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-end">
+				<li class="page-item">
+					<a class="page-link admin-page-link" href="#" aria-label="Previous">
+						<span class="material-icons" aria-hidden="true">keyboard_arrow_left</span>
+					</a>
+				</li>
+				<li class="page-item active"><a class="page-link admin-page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link admin-page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link admin-page-link" href="#">3</a></li>
+				<li class="page-item">
+					<a class="page-link admin-page-link" href="#" aria-label="Next">
+						<span class="material-icons" aria-hidden="true">keyboard_arrow_right</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</section>
+</main>
+    </div>
+  </div>
+
+  <script src="./assets/js/all.js"></script>
+
+</body>
+
+</html>

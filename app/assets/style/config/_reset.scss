@@ -1,0 +1,35 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Lato, "Helvetica Neue", Arial, sans-serif;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $body-color;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #000;
+    transition: $animation;
+    &:hover {
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
