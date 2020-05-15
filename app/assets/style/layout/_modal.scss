@@ -214,9 +214,12 @@
   line-height: 19px;
 }
 .readCntInfo-name {
+  font-size: $font-size-lg;
+  line-height: 29px;
   margin-bottom: 0.5rem;
 }
 .readCntInfo-mail {
+  line-height: 15px;
   margin-bottom: 1.25rem;
 }
 .readCntInfo-funtion {
